@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('continuous deployment') {
+            steps {
+                git 'https://github.com/saimvv/web-applicaton.git'
+                sh "sudo cp app.py /root/myproject"
+                sh "sudo cp wsgi.py /root/myproject"
+                sh "sudo sh /root/script.sh"
+                
+            }
+        }
+    }
+}
