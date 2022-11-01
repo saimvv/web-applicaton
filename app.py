@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return '<h1>Hello, IIT Madras</h1>'
+    return '<h1>Hello, word</h1>'
